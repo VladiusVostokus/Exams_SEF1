@@ -3,9 +3,7 @@
 
 const only = (obj, ...incomingKeys) => {
 
-  
   const objectCopy = Object.assign({}, obj);
-
   const keys = Object.keys(objectCopy);
 
   for (const keyValue of keys) {
