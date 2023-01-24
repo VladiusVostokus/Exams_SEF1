@@ -1,7 +1,7 @@
 // Copy only listed values from dict
 'use strict';
 
-const only = (obj, ...arr) => {
+const only = (obj, ...incomingKeys) => {
 
   
   const objectCopy = Object.assign({}, obj);
@@ -10,7 +10,7 @@ const only = (obj, ...arr) => {
 
   for (const keyValue of keys) {
 
-    if (!arr.includes(keyValue)) delete objectCopy[keyValue];
+    if (!incomingKeys.includes(keyValue)) delete objectCopy[keyValue];
 
   }
 
