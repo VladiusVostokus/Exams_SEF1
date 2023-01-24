@@ -1,16 +1,16 @@
 // Copy only listed values from dict
-'Use strict';
+'use strict';
 
 const only = (obj, ...arr) => {
 
-  const valuesList = arr.slice(0);
-  const objectCopy = Object.assign({},obj);
+  
+  const objectCopy = Object.assign({}, obj);
 
-  const keys = Object.keys(objectCopy, 'a', 'b', 'c');
+  const keys = Object.keys(objectCopy);
 
-  for(const keyValue of keys){
+  for (const keyValue of keys) {
 
-    if (!valuesList.includes(keyValue)) delete objectCopy[keyValue];
+    if (!arr.includes(keyValue)) delete objectCopy[keyValue];
 
   }
 
