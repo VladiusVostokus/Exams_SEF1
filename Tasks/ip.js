@@ -3,11 +3,11 @@
 
 const Parseip = (i) => {
 
-  const a = [];
 
   if (i === '') return;
 
   else {
+    const a = [];
     const B = i.split('.');
 
     if (B.length != 4) return;
@@ -16,12 +16,12 @@ const Parseip = (i) => {
     for (const b of B) {
 
       a[j] = parseInt(b);
-      if (isNaN(a[j])) return;
-      j++;
+      if (isNaN (a[j]) ) return;
+      j++; 
 
     }
+    return a;
   }
-  return a;
 };
 
 require('../Tests/ip.js')(Parseip);
