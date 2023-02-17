@@ -7,20 +7,21 @@ const Parseip = (i) => {
   if (i === '') return;
 
   else {
-    const a = [];
-    const B = i.split('.');
 
-    if (B.length != 4) return;
+    const result = [];
+    const ip = i.split('.');
+
+    if (ip.length != 4) return;
     let j = 0;
 
-    for (const b of B) {
+    for (const b of ip) {
 
-      a[j] = parseInt(b);
-      if (isNaN (a[j]) ) return;
+      result[j] = parseInt(b);
+      if ( Number.isNaN(result[j]) ) return;
       j++; 
 
     }
-    return a;
+    return result;
   }
 };
 
