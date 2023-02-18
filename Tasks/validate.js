@@ -1,4 +1,5 @@
 // Validate person name
+'use strict'
 
 const isValidate = (T) => {
 
@@ -9,7 +10,7 @@ const isValidate = (T) => {
   ) 
   return false;
 
-    for (C of T) {
+    for (const C of T) {
 
       if (C === ' ') continue;
 
