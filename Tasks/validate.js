@@ -1,22 +1,22 @@
 // Validate person name
 'use strict'
 
-const isValidate = (T) => {
+const isValidate = (name) => {
 
-  if (!T || T === '' 
-    || typeof T !== 'string' 
-    || T.length === 0 
-    || !T.includes(' ')
+  if (!name || name === '' 
+    || typeof name !== 'string' 
+    || name.length === 0 
+    || !name.includes(' ')
   ) 
   return false;
 
-  const checking = T.toLowerCase();
+  const checkStr = name.toLowerCase();
 
-    for (const C of checking) {
+    for (const letter of checkStr) {
 
-      if (C === ' ') continue;
+      if (letter === ' ') continue;
 
-      if (!(C >= 'a' && C <= 'z')) return false;
+      if (!(letter >= 'a' && letter <= 'z')) return false;
       
     }
     return true;
