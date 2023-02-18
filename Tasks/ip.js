@@ -1,22 +1,22 @@
 // Split string by the first occurrence of separator
 'use strict';
 
-const Parseip = (i) => {
+const Parseip = (ip) => {
 
 
-  if (i === '') return;
+  if (ip === '' || typeof ip !== 'string') return;
 
   else {
 
     const result = [];
-    const ip = i.split('.');
+    const workingArr = ip.split('.');
 
-    if (ip.length != 4) return;
+    if (workingArr.length != 4) return;
     let j = 0;
 
-    for (const b of ip) {
+    for (const elem of workingArr) {
 
-      result[j] = parseInt(b);
+      result[j] = parseInt(elem);
       if ( Number.isNaN(result[j]) ) return;
       j++; 
 
