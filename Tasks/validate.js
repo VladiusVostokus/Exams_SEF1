@@ -16,7 +16,7 @@ const isValidate = (T) => {
 
       if (C === ' ') continue;
 
-      if (!(C.charCodeAt() >= 97 && C.charCodeAt() <= 122)) return false;
+      if (!(C >= 'a' && C <= 'z')) return false;
       
     }
     return true;
