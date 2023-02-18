@@ -13,14 +13,8 @@ const isValidate = (T) => {
 
       if (C === ' ') continue;
 
-      if (
-        C.toLowerCase().charCodeAt(0) >= 97 &&
-        C.toLowerCase().charCodeAt(0) <= 122
-      ) null;
-
-      else return false;
+      if (!(C.toLowerCase().charCodeAt(0) >= 97 && C.toLowerCase().charCodeAt(0) <= 122)) return false;
       
-
     }
     return true;
   
