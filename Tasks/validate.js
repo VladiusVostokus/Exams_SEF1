@@ -10,11 +10,13 @@ const isValidate = (T) => {
   ) 
   return false;
 
-    for (const C of T) {
+  const checking = T.toLowerCase();
+
+    for (const C of checking) {
 
       if (C === ' ') continue;
 
-      if (!(C.toLowerCase().charCodeAt(0) >= 97 && C.toLowerCase().charCodeAt(0) <= 122)) return false;
+      if (!(C.charCodeAt() >= 97 && C.charCodeAt() <= 122)) return false;
       
     }
     return true;
