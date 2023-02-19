@@ -1,6 +1,6 @@
 // Count words in a string
 
-Words = function (s) {
+Words = (s) => {
 
   number_of_words_in_s = 0;
   flag = false;
