@@ -1,17 +1,18 @@
 // Count words in a string
+'use strict'
 
-Words = (s) => {
+const Words = (s) => {
 
-  wordsInS = 0;
+  let wordsInS = 0;
 
   if (s === '') return wordsInS;
 
   if (s.length > 1) wordsInS++;
 
-  for (c of s) {
+  for (const c of s) {
 
       if (c === ' ') wordsInS++
-      
+
   }
 
   return wordsInS;
