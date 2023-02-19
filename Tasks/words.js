@@ -2,54 +2,19 @@
 
 Words = (s) => {
 
-  number_of_words_in_s = 0;
-  flag = false;
+  wordsInS = 0;
+
+  if (s === '') return wordsInS;
+
+  if (s.length > 1) wordsInS++;
 
   for (c of s) {
 
-    if (!flag) {
-
-      if (c === ' ') {
-
-        if (flag === true) {
-          flag = false;
-        } 
-      } 
-
-      else {
-
-        if (flag === true) {
-          flag = true;
-        } 
-
-        else {
-          flag = true;
-        }
-
-        number_of_words_in_s++;
-      }
-    } 
-
-    else {
-
-      if (c === ' ') {
-
-        if (flag === true) {
-          flag = false;
-        } 
-        
-      } 
-
-      else {
-
-        if (flag === true) {
-          flag = true;
-        } 
-
-      }
-    }
+      if (c === ' ') wordsInS++
+      
   }
-  return number_of_words_in_s;
+
+  return wordsInS;
 };
 
 require('../Tests/words.js')(Words);
