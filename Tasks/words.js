@@ -3,18 +3,12 @@
 
 const Words = (s) => {
 
-  let wordsInS = 0;
+  if (s.length === 0) return 0;
+  
+  const str = s.split(' ');
 
-  if (s.length > 1) wordsInS++;
-  else return wordsInS;
-
-  for (const c of s) {
-
-      if (c === ' ') wordsInS++
-
-  }
-
-  return wordsInS;
+  return str.length;
+  
 };
 
 require('../Tests/words.js')(Words);
