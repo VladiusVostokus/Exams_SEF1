@@ -14,16 +14,15 @@ Words = function (s) {
         if (flag === true) {
           flag = false;
         } 
-
-        else {
-          flag = false;
-        }
       } 
 
       else {
+
         if (flag === true) {
           flag = true;
-        } else {
+        } 
+
+        else {
           flag = true;
         }
 
@@ -39,9 +38,6 @@ Words = function (s) {
           flag = false;
         } 
         
-        else {
-          flag = false;
-        }
       } 
 
       else {
@@ -49,10 +45,6 @@ Words = function (s) {
         if (flag === true) {
           flag = true;
         } 
-
-        else {
-          flag = true;
-        }
 
       }
     }
