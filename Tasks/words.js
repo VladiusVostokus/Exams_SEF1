@@ -1,14 +1,16 @@
 // Count words in a string
 'use strict'
 
-const Words = (s) => {
+const Words = (arrayOfWords) => {
 
-  if (s.length === 0) return 0;
+  if (arrayOfWords.length === 0) return 0;
   
-  const str = s.split(' ');
+  const str = arrayOfWords.split(' ');
 
-  return str.length;
-  
+  const countOfWords = str.length;
+
+  return countOfWords;
+
 };
 
 require('../Tests/words.js')(Words);
