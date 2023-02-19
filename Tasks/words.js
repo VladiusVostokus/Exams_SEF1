@@ -5,9 +5,8 @@ const Words = (s) => {
 
   let wordsInS = 0;
 
-  if (s === '') return wordsInS;
-
   if (s.length > 1) wordsInS++;
+  else return wordsInS;
 
   for (const c of s) {
 
