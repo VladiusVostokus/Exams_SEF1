@@ -1,18 +1,22 @@
 // Count types in an array
 
 types_ = function (s) {
-  types_ = {
+
+  types = {
     number: 0,
     string: 0,
     boolean: 0,
   };
+
   for (i of s) {
     const t = typeof i;
-    types_[t]++;
+    types[t]++;
   }
+
   s.push('string');
-  return types_;
-  s.length;
+  
+  return types;
+  
 };
 
 require('../Tests/types.js')(types_);
