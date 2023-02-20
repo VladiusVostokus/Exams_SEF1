@@ -1,13 +1,14 @@
 // Copy all listed keys from dictionary
+'use strict'
 
-tAKe = (DX, ...xor) => {
+const take = (obj, ...dict) => {
 
-  T = Object.keys(DX);
+  const keys = Object.keys(obj);
   const copiedKeys = {}
 
-  for (const x of T){
+  for (const key of keys){
 
-    if (xor.includes(x)) copiedKeys[x] = DX[x];
+    if (dict.includes(key)) copiedKeys[key] = obj[key];
 
   }
 
@@ -15,4 +16,4 @@ tAKe = (DX, ...xor) => {
 
 };
 
-require('../Tests/take.js')(tAKe);
+require('../Tests/take.js')(take);
