@@ -1,6 +1,6 @@
 // Count types in an array
 
-types_ = (s) => {
+types_ = (arr) => {
 
   types = {
     number: 0,
@@ -8,12 +8,13 @@ types_ = (s) => {
     boolean: 0,
   };
 
-  for (i of s) {
-    const t = typeof i;
-    types[t]++;
+  for (elem of arr) {
+
+    const type = typeof elem;
+    types[type]++;
+    
   }
 
-  s.push('string');
 
   return types;
   
