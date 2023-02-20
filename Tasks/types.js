@@ -1,6 +1,6 @@
 // Count types in an array
 
-types_ = function (s) {
+types_ = (s) => {
 
   types = {
     number: 0,
@@ -14,7 +14,7 @@ types_ = function (s) {
   }
 
   s.push('string');
-  
+
   return types;
   
 };
