@@ -3,14 +3,15 @@
 tAKe = (DX, ...xor) => {
 
   T = Object.keys(DX);
+  const copiedKeys = {}
 
   for (const x of T){
 
-    if (!xor.includes(x)) delete DX[x];
+    if (xor.includes(x)) copiedKeys[x] = DX[x];
 
   }
 
-  return DX;
+  return copiedKeys;
 
 };
 
