@@ -1,20 +1,20 @@
 // Count types in an array
+'use strict'
 
-types_ = (arr) => {
+const types_ = (arr) => {
 
-  types = {
+  const types = {
     number: 0,
     string: 0,
     boolean: 0,
   };
 
-  for (elem of arr) {
+  for (const elem of arr) {
 
     const type = typeof elem;
     types[type]++;
     
   }
-
 
   return types;
   
