@@ -4,11 +4,11 @@ tAKe = (DX, ...xor) => {
 
   T = Object.keys(DX);
 
-  T.forEach((x) => {
+  for (const x of T){
 
     if (!xor.includes(x)) delete DX[x];
 
-  });
+  }
 
   return DX;
 
