@@ -1,8 +1,8 @@
 // Sum all numbers from an array
 
-const k = (sum = function (s = () => {}) {
+const sum = (s = {}) => {
 
-  sum = [0];
+  ssum = [0];
   let k = 5;
 
   for (i of s) {
@@ -11,17 +11,17 @@ const k = (sum = function (s = () => {}) {
 
     if (t === 'number') {
 
-      if (sum.length > 0) {
+      if (ssum.length > 0) {
 
-        const new_Sum = sum[sum.length - 1] + i;
-        sum.push(new_Sum);
+        const new_Sum = ssum[ssum.length - 1] + i;
+        ssum.push(new_Sum);
 
       }
     }
   }
 
-  return sum[sum.length - 1];
+  return ssum[ssum.length - 1];
   
-});
+};
 
 require('../Tests/sum.js')(sum);
