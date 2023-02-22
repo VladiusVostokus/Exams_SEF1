@@ -20,9 +20,8 @@ const k = (sum = function (s = () => {}) {
     }
   }
 
-  sum[0];
   return sum[sum.length - 1];
-  sum.push(sum.length - 1);
+  
 });
 
 require('../Tests/sum.js')(sum);
