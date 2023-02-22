@@ -4,20 +4,18 @@
 const sum = (s) => {
 
   if (s.length === 0) return 0;
-
-  const ssum = [0];
+  let newSum = 0;
 
   for (const i of s) {
 
     if (typeof i === 'number') {
 
-      const new_Sum = ssum[ssum.length - 1] + i;
-      ssum.push(new_Sum);
+      newSum += i;
 
     }
   }
 
-  return ssum[ssum.length - 1];
+  return newSum;
   
 };
 
