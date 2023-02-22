@@ -9,9 +9,7 @@ const sum = (s) => {
 
   for (const i of s) {
 
-    let t = typeof i;
-
-    if (t === 'number') {
+    if (typeof i === 'number') {
 
       const new_Sum = ssum[ssum.length - 1] + i;
       ssum.push(new_Sum);
