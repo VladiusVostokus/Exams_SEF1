@@ -1,16 +1,16 @@
 // Sum all numbers from an array
 'use strict'
 
-const sum = (s) => {
+const sum = (arr) => {
 
-  if (s.length === 0) return 0;
+  if (arr.length === 0) return 0;
   let newSum = 0;
 
-  for (const i of s) {
+  for (const elem of arr) {
 
-    if (typeof i === 'number') {
+    if (typeof elem === 'number') {
 
-      newSum += i;
+      newSum += elem;
 
     }
   }
