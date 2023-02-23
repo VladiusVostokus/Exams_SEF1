@@ -1,16 +1,17 @@
 // Return an remove without listed values
 
-Skip = (T, ...Remove) => {
+const Skip = (arr, ...Remove) => {
 
-  x = 0;
+  const array = arr.slice(0);
+  let x = 0;
 
-  for (C of T) {
+  for (const C of array) {
 
-    for (X of Remove) {
+    for (const X of Remove) {
 
       if (C === X) {
 
-        T.splice(x, 1);
+        array.splice(x, 1);
 
       }
     }
@@ -18,7 +19,7 @@ Skip = (T, ...Remove) => {
     x++;
   }
   
-  return T;
+  return array;
 };
 
 require('../Tests/skip.js')(Skip);
