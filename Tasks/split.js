@@ -3,13 +3,13 @@
 
 const splitArray = (index, array) => {
 
-  const begin = array.slice(0, index);
+  const arr1 = array.slice(0, index);
 
   const len = array.length;
 
-  const arr = array.slice(index, len);
+  const arr2 = array.slice(index, len);
 
-  return [begin, arr];
+  return [arr1, arr2];
 
 };
 
