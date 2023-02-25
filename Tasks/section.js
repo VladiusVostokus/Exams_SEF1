@@ -3,11 +3,13 @@
 
 const SectionString = (s, t) => {
 
-  const i = s.indexOf(t);
+  const ss = s.slice(0);
 
-  if (i < 0 || t === '') return [s, ''];
+  const i = ss.indexOf(t);
 
-  else return [s.slice(0, i), s.slice(i + t.length)];
+  if (i < 0 || t === '') return [ss, ''];
+
+  else return [ss.slice(0, i), ss.slice(i + t.length)];
   
 };
 
