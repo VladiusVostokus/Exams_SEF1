@@ -9,8 +9,14 @@ const SectionString = (s, t) => {
 
   if (i < 0 || t === '') return [ss, ''];
 
-  else return [ss.slice(0, i), ss.slice(i + t.length)];
-  
+  else {
+    
+    const part1 = ss.slice(0, i);
+
+    const part2 = ss.slice(i + t.length);
+
+    return [part1, part2];
+  }
 };
 
 require('../Tests/section.js')(SectionString);
