@@ -1,17 +1,17 @@
 // Split string into array by the first occurrence of separator
 'use strict'
 
-const SectionString = (s, t) => {
+const SectionString = (array, separator) => {
 
-  const i = s.indexOf(t);
+  const index = array.indexOf(separator);
 
-  if (i < 0 || t === '') return [s, ''];
+  if (index < 0 || separator === '') return [array, ''];
 
   else {
     
-    const part1 = s.slice(0, i);
+    const part1 = array.slice(0, index);
 
-    const part2 = s.slice(i + t.length);
+    const part2 = array.slice(index + separator.length);
 
     return [part1, part2];
   }
