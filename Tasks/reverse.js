@@ -4,7 +4,7 @@
 const reverse = (dict) => {
 
   const keys = Object.keys(dict);
-  const resultDict = Object.assign({},dict);
+  const resultDict = Object.assign({}, dict);
 
   for (const key of keys) {
 
