@@ -9,7 +9,7 @@ Replace = (str, substr, newstr) => {
     src = str;
     res = '';
 
-    do {
+    while(true){
 
       const _index = src.indexOf(substr);
 
@@ -26,7 +26,7 @@ Replace = (str, substr, newstr) => {
 
       }
       
-    } while (true);
+    }
   }
 };
 
