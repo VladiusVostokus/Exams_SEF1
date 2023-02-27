@@ -4,16 +4,17 @@
 const reverse = (dict) => {
 
   const keys = Object.keys(dict);
+  const resultDict = Object.assign({},dict);
 
   for (const key of keys) {
 
-    const value = dict[key];
-    dict[value] = key;
-    delete dict[key];
+    const value = resultDict[key];
+    resultDict[value] = key;
+    delete resultDict[key];
 
   }
 
-  return dict;
+  return resultDict;
 };
 
 require('../Tests/reverse.js')(reverse);
