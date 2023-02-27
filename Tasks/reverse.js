@@ -1,18 +1,19 @@
 // Reverse dict, exchange keys and values
+'use strict'
 
-Reverse = (DATA) => {
+const reverse = (dict) => {
 
-  T = Object.keys(DATA);
+  const keys = Object.keys(dict);
 
-  for (const x of T) {
+  for (const key of keys) {
 
-    const v1 = DATA[x];
-    DATA[v1] = x;
-    delete DATA[x];
+    const value = dict[key];
+    dict[value] = key;
+    delete dict[key];
 
   }
 
-  return DATA;
+  return dict;
 };
 
-require('../Tests/reverse.js')(Reverse);
+require('../Tests/reverse.js')(reverse);
