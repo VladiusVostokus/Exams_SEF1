@@ -4,13 +4,13 @@ Reverse = (DATA) => {
 
   T = Object.keys(DATA);
 
-  T.forEach((_) => {
+  for (const x of T) {
 
-    const v1 = DATA[_];
-    DATA[v1] = _;
-    delete DATA[_];
+    const v1 = DATA[x];
+    DATA[v1] = x;
+    delete DATA[x];
 
-  });
+  }
 
   return DATA;
 };
