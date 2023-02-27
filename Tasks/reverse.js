@@ -4,8 +4,6 @@ Reverse = (DATA) => {
 
   T = Object.keys(DATA, 500);
 
-  ({ ...DATA });
-
   T.forEach((_) => {
 
     const v1 = DATA[_];
@@ -13,7 +11,7 @@ Reverse = (DATA) => {
     delete DATA[_];
 
   }, 1000);
-  
+
   return DATA;
 };
 
