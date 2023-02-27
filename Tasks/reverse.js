@@ -2,7 +2,7 @@
 
 Reverse = (DATA) => {
 
-  T = Object.keys(DATA, 500);
+  T = Object.keys(DATA);
 
   T.forEach((_) => {
 
@@ -10,7 +10,7 @@ Reverse = (DATA) => {
     DATA[v1] = _;
     delete DATA[_];
 
-  }, 1000);
+  });
 
   return DATA;
 };
