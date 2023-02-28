@@ -1,14 +1,13 @@
 // Replace substring with newstr
+'use strict'
 
-replace = (str, substr, newstr) => {
+const replace = (str, substr, newstr) => {
 
   if (substr === '') return str;
 
-  src = str;
-
-  res = src.replace(substr,newstr);
+  const result = str.replace(substr,newstr);
   
-  return res;
+  return result;
   
 };
 
