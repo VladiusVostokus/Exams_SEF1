@@ -13,11 +13,13 @@ _range = (...Range) => {
       Range[i - from] = i;
       
     }
+
+    return Range;
+
   } 
 
   else return [];
   
-  return Range;
 };
 
 require('../Tests/range.js')(_range);
