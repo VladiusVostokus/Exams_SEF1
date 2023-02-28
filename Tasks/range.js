@@ -1,20 +1,20 @@
 // Generate int array from given range
 
-_range = (...Range) => {
+range = (...Range) => {
 
   let [from, to] = Range;
 
   if (to >= from) {
 
-    Range = new Array(to - from + 1);
+    const result = []
 
     for (let i = from; i <= to; i++) {
       
-      Range[i - from] = i;
+      result.push(i);
       
     }
 
-    return Range;
+    return result;
 
   } 
 
@@ -22,4 +22,4 @@ _range = (...Range) => {
   
 };
 
-require('../Tests/range.js')(_range);
+require('../Tests/range.js')(range);
