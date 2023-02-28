@@ -4,13 +4,14 @@ range = (...Range) => {
 
   let [from, to] = Range;
 
+
   if (to >= from) {
 
-    const result = []
+    const result = [];
 
-    for (let i = from; i <= to; i++) {
+    for (let number = from; number <= to; number++) {
       
-      result.push(i);
+      result.push(number);
       
     }
 
