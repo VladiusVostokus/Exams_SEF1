@@ -3,31 +3,29 @@
 Replace = (str, substr, newstr) => {
 
   if (substr === '') return str;
-  
-  else {
 
-    src = str;
-    res = '';
+  src = str;
+  res = '';
 
-    while(true){
+  while(true){
 
-      const _index = src.indexOf(substr);
+    const _index = src.indexOf(substr);
 
-      if (_index === -1) {
+    if (_index === -1) {
 
-        return res + src;
-      } 
+      return res + src;
+    } 
 
-      else {
+    else {
 
-        const start = src.substring(0, _index);
-        src = src.substring(_index + substr.length, src.length);
-        res += start + newstr;
+      const start = src.substring(0, _index);
+      src = src.substring(_index + substr.length, src.length);
+      res += start + newstr;
 
-      }
-      
     }
+      
   }
+  
 };
 
 require('../Tests/replace.js')(Replace);
