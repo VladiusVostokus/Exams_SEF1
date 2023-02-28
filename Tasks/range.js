@@ -1,9 +1,11 @@
 // Generate int array from given range
+'use strict'
 
-range = (...Range) => {
+const range = (...Range) => {
 
-  let [from, to] = Range;
+  const [from, to] = Range;
 
+  const elseResult = [];
 
   if (to >= from) {
 
@@ -19,7 +21,7 @@ range = (...Range) => {
 
   } 
 
-  else return [];
+  else return elseResult;
   
 };
 
