@@ -3,23 +3,40 @@
 const EMPTY = '';
 
 quotes = function (s) {
+
   res = [];
+
   open = false;
+
   for (c of s) {
+
     if (c === '"') {
+
       for (i of c) {
+
         if (!open) {
+
           res.push('«');
           open = true;
-        } else {
+
+        } 
+        else {
+
           res.push('»');
           open = false;
+
         }
       }
-    } else {
+
+    } 
+    else {
+      
       if (c !== '"') {
+
         for (i of c) {
+
           res.push(i);
+
         }
       }
     }
