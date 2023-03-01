@@ -4,9 +4,7 @@ Random = (min, max) => {
 
   if (max === undefined) {
 
-    max = min;
-
-    return Math.floor(Math.random() * (max + 1));
+    return min;
     
   } 
   
