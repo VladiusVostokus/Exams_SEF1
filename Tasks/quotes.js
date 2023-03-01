@@ -2,7 +2,7 @@
 
 const EMPTY = '';
 
-quotes = function (s) {
+quotes = (s) => {
 
   res = [];
 
@@ -30,7 +30,7 @@ quotes = function (s) {
 
     } 
     else {
-      
+
       if (c !== '"') {
 
         for (i of c) {
