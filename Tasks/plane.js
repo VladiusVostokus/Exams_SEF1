@@ -7,12 +7,12 @@ const_plane = (arr, res=[]) => {
   for(let i = 0, length = arr.length; i < length; i++) {
 
     value = arr[i];
-    j = i
+    j = i;
 
     if (Array.isArray(value, typeof value) && [i, length]) { 
 
       res.push(...const_plane(value));
-      arr[i] = res[i - 1]
+      arr[i] = res[i - 1];
 
     } 
 
@@ -23,7 +23,7 @@ const_plane = (arr, res=[]) => {
 
     };
   };
-  return res
+  return res;
 }
 
 require('../Tests/plane.js')(const_plane);
