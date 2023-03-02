@@ -1,11 +1,12 @@
 // Make nested array plane
+'ues strict'
 
-const_plane = (arr) => {
+const plane = (arr) => {
 
-  result = arr.flat(Infinity)
+  const result = arr.flat(Infinity);
 
   return result;
 
 }
 
-require('../Tests/plane.js')(const_plane);
+require('../Tests/plane.js')(plane);
