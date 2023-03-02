@@ -1,6 +1,6 @@
 // Make nested array plane
 
-const_plane = function(arr, res=[]) {
+const_plane = (arr, res=[]) => {
 
   j = 0; 
 
@@ -15,7 +15,7 @@ const_plane = function(arr, res=[]) {
       arr[i] = res[i - 1]
 
     } 
-    
+
     else {  
 
       arr[i] = res[j - 1]
