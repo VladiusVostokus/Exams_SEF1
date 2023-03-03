@@ -1,20 +1,20 @@
 // Generate random password
 
-let GeneratePassword = (alphabet, length) => {
+const generatePassword = (alphabet, length) => {
 
   const MAX = alphabet.length;
 
-  key = '';
+  let password = '';
 
   for (let i = 0; i < length; i++) {
 
-    Index = Math.floor(Math.random() * MAX);
-    key = key + alphabet[Index];
+    const Index = Math.floor(Math.random() * MAX);
+    password = password + alphabet[Index];
 
   }
 
-  return key;
+  return password;
   
 };
 
-require('../Tests/password.js')(GeneratePassword);
+require('../Tests/password.js')(generatePassword);
