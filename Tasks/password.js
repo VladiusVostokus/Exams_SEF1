@@ -1,15 +1,15 @@
 // Generate random password
 
-const generatePassword = (alphabet, length) => {
+const generatePassword = (alphabet, len) => {
 
-  const MAX = alphabet.length;
+  const passwordLen = alphabet.length - 1;
 
   let password = '';
 
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < len; i++) {
 
-    const Index = Math.floor(Math.random() * MAX);
-    password = password + alphabet[Index];
+    const index = Math.floor(Math.random() * passwordLen);
+    password = password + alphabet[index];
 
   }
 
