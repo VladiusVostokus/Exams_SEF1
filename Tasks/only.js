@@ -3,12 +3,13 @@
 
 const only = (obj, ...incomingKeys) => {
 
-  const objectCopy = Object.assign({}, obj);
-  const keys = Object.keys(objectCopy);
+  const objectCopy = {};
+  const keys = Object.keys(obj);
 
   for (const keyValue of keys) {
 
-    if (!incomingKeys.includes(keyValue)) delete objectCopy[keyValue];
+    if (incomingKeys.includes(keyValue)) 
+      objectCopy[keyValue] = obj[keyValue];
 
   }
 
