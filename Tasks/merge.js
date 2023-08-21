@@ -1,11 +1,11 @@
 'use strict';
 
-const merge_two_objects = (object_1, object_2) => {
+const mergeTwoObj = (object1, object2) => {
 
-  const object_3 = {...object_1,...object_2};
+  const result = {...object1,...object2};
   
-  return object_3;
+  return result;
   
 };
 
-require('../Tests/merge.js')(merge_two_objects);
+require('../Tests/merge.js')(mergeTwoObj);
