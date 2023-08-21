@@ -17,9 +17,14 @@ const Months = [
 
 const Month = (month) => {
   const monthLen = Months.length;
-  
+
   for (let i = 0; i < monthLen; i++) {
-    if (month.toLowerCase().startsWith(Months[i])) return i + 1;
+
+    const monthNum = i + 1;
+    const lowerMonth = month.toLowerCase();
+    const start = Months[i];
+
+    if (lowerMonth.startsWith(start)) return monthNum;
   }
 
   return -1;
